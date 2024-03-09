@@ -11,12 +11,10 @@ export default function Router() {
       path: "/",
       element: <App />,
       errorElement: <ErrorPage />,
-      children: [
-        { path: "store", element: <Store /> },
-        { path: "about", element: <About /> },
-        { path: "contact", element: <Contact /> },
-      ],
     },
+    { path: "/store", element: <Store /> },
+    { path: "/about", element: <About /> },
+    { path: "/contact", element: <Contact /> },
   ]);
 
   return <RouterProvider router={router} />;

@@ -1,5 +1,12 @@
+import NavBar from "./NavBar";
+
 function Contact() {
-  return <div>Contact</div>;
+  return (
+    <>
+      <NavBar />
+      <h1>Contact</h1>
+    </>
+  );
 }
 
 export default Contact;

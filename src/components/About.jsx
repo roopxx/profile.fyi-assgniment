@@ -1,5 +1,12 @@
+import NavBar from "./NavBar";
+
 function About() {
-  return <div>About</div>;
+  return (
+    <>
+      <NavBar />
+      <h1>About</h1>
+    </>
+  );
 }
 
 export default About;
