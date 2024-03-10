@@ -15,7 +15,7 @@ function Store() {
       <NavBar />
       <div className="size-full p-10">
         <h1 className="p-5 text-5xl">PICK YOUR STYLE</h1>
-        <div className="m-2 columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>img:not(:first-child)]:mt-8">
+        <div className="masonry m-2 [&>img:not(:first-child)]:mt-8">
           {posters.map((product) => (
             <Card
               key={product.id}
