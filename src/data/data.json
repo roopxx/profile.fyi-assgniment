@@ -97,6 +97,348 @@
       "path": "src/assets/images/anime/vintage.jpeg",
       "description": "Vintage-style artwork featuring anime characters.",
       "price": 9
+    }, {
+      "id": 15,
+      "title": "Art Of Batman",
+      "path": "src/assets/images/DC/art_batman.jpeg",
+      "description": "Artwork featuring Batman, a character from DC Comics.",
+      "price": 15
+    },
+    {
+      "id": 16,
+      "title": "Batman Poster",
+      "path": "src/assets/images/DC/batman_wall_poster.jpeg",
+      "description": "Wall poster featuring Batman, a character from DC Comics.",
+      "price": 18
+    },
+    {
+      "id": 17,
+      "title": "Batman",
+      "path": "src/assets/images/DC/batman.jpeg",
+      "description": "Image of Batman, a character from DC Comics.",
+      "price": 14
+    },
+    {
+      "id": 18,
+      "title": "DC Comics",
+      "path": "src/assets/images/DC/DC_comics.jpeg",
+      "description": "Logo of DC Comics, a comic book publisher.",
+      "price": 10
+    },
+    {
+      "id": 19,
+      "title": "The Flash",
+      "path": "src/assets/images/DC/flash.jpeg",
+      "description": "Artwork featuring The Flash, a DC Comics superhero.",
+      "price": 16
+    },
+    {
+      "id": 20,
+      "title": "Green Lantern",
+      "path": "src/assets/images/DC/green_lantern.jpeg",
+      "description": "Artwork featuring Green Lantern, a DC Comics superhero.",
+      "price": 17
+    },
+    {
+      "id": 21,
+      "title": "Harley Quinn",
+      "path": "src/assets/images/DC/Harley _Quinn.jpeg",
+      "description": "Artwork featuring Harley Quinn, a character from DC Comics.",
+      "price": 18
+    },
+    {
+      "id": 22,
+      "title": "Joker",
+      "path": "src/assets/images/DC/joker_2.jpeg",
+      "description": "Image of Joker, a character from DC Comics.",
+      "price": 16
+    },
+    {
+      "id": 23,
+      "title": "Joker Poster",
+      "path": "src/assets/images/DC/joker_poster.jpeg",
+      "description": "Poster featuring Joker, a character from DC Comics.",
+      "price": 20
+    },
+    {
+      "id": 24,
+      "title": "Joker : WSS?",
+      "path": "src/assets/images/DC/Joker.jpeg",
+      "description": "Image of Joker, a character from DC Comics.",
+      "price": 17
+    },
+    {
+      "id": 25,
+      "title": "Superman",
+      "path": "src/assets/images/DC/superman.jpeg",
+      "description": "Artwork featuring Superman, a DC Comics superhero.",
+      "price": 18
+    },
+    {
+      "id": 26,
+      "title": "Symbiote",
+      "path": "src/assets/images/DC/Symbiote.jpeg",
+      "description": "Artwork featuring Symbiote, a character from DC Comics.",
+      "price": 15
+    },
+    {
+      "id": 27,
+      "title": "Avengers Assemble",
+      "path": "src/assets/images/marvel/avengers_assemble.jpeg",
+      "description": "Artwork featuring the Avengers team.",
+      "price": 20
+    },
+    {
+      "id": 28,
+      "title": "Black Panther",
+      "path": "src/assets/images/marvel/black_panther.jpeg",
+      "description": "Artwork featuring Black Panther, a Marvel Comics character.",
+      "price": 18
+    },
+    {
+      "id": 29,
+      "title": "Captain America",
+      "path": "src/assets/images/marvel/captain_america.jpeg",
+      "description": "Artwork featuring Captain America, a Marvel Comics superhero.",
+      "price": 19
+    },
+    {
+      "id": 30,
+      "title": "Deadpool",
+      "path": "src/assets/images/marvel/deadpool.jpeg",
+      "description": "Artwork featuring Deadpool, a Marvel Comics character.",
+      "price": 16
+    },
+    {
+      "id": 31,
+      "title": "Doctor Strange",
+      "path": "src/assets/images/marvel/dr_strange.jpeg",
+      "description": "Artwork featuring Doctor Strange, a Marvel Comics character.",
+      "price": 17
+    },
+    {
+      "id": 32,
+      "title": "Avengers: Endgame",
+      "path": "src/assets/images/marvel/endgame.jpeg",
+      "description": "Artwork related to the Avengers: Endgame movie.",
+      "price": 22
+    },
+    {
+      "id": 33,
+      "title": "Groot",
+      "path": "src/assets/images/marvel/groot.jpeg",
+      "description": "Artwork featuring Groot, a Marvel Comics character.",
+      "price": 19
+    },
+    {
+      "id": 34,
+      "title": "Hulk",
+      "path": "src/assets/images/marvel/hulk.jpeg",
+      "description": "Artwork featuring Hulk, a Marvel Comics character.",
+      "price": 21
+    },
+    {
+      "id": 35,
+      "title": "Iron Man",
+      "path": "src/assets/images/marvel/ironman.jpeg",
+      "description": "Artwork featuring Iron Man, a Marvel Comics character.",
+      "price": 20
+    },
+    {
+      "id": 36,
+      "title": "Loki",
+      "path": "src/assets/images/marvel/loki.jpeg",
+      "description": "Artwork featuring Loki, a Marvel Comics character.",
+      "price": 18
+    },
+    {
+      "id": 37,
+      "title": "Marvel Comic",
+      "path": "src/assets/images/marvel/marvel_comic.jpeg",
+      "description": "Comic book cover featuring various Marvel Comics characters.",
+      "price": 15
+    },
+    {
+      "id": 38,
+      "title": "Moon Knight",
+      "path": "src/assets/images/marvel/moonknight.jpeg",
+      "description": "Artwork featuring Moon Knight, a Marvel Comics character.",
+      "price": 17
+    },
+    {
+      "id": 39,
+      "title": "Spider-Man Bell",
+      "path": "src/assets/images/marvel/spider_bell.jpeg",
+      "description": "Artwork featuring Spider-Man with a bell.",
+      "price": 16
+    },
+    {
+      "id": 40,
+      "title": "Spider-Man Dunk",
+      "path": "src/assets/images/marvel/spider_dunk.jpeg",
+      "description": "Artwork featuring Spider-Man dunking.",
+      "price": 15
+    },
+    {
+      "id": 41,
+      "title": "Spider-Man",
+      "path": "src/assets/images/marvel/spiderman.jpeg",
+      "description": "Artwork featuring Spider-Man, a Marvel Comics character.",
+      "price": 18
+    },
+    {
+      "id": 42,
+      "title": "Thor",
+      "path": "src/assets/images/marvel/thor.jpeg",
+      "description": "Artwork featuring Thor, a Marvel Comics character.",
+      "price": 19
+    },
+    {
+      "id": 43,
+      "title": "Tony Stark",
+      "path": "src/assets/images/marvel/tony_stark.jpeg",
+      "description": "Artwork featuring Tony Stark, also known as Iron Man.",
+      "price": 20
+    },
+    {
+      "id": 44,
+      "title": "Darth Vader",
+      "path": "src/assets/images/marvel/vader.jpeg",
+      "description": "Artwork featuring Darth Vader, a character from the Star Wars franchise.",
+      "price": 22
+    },
+    {
+      "id": 45,
+      "title": "Venom",
+      "path": "src/assets/images/marvel/venom.jpeg",
+      "description": "Artwork featuring Venom, a Marvel Comics character.",
+      "price": 21
+    },
+    {
+      "id": 46,
+      "title": "Generic Artwork",
+      "path": "src/assets/images/art.jpeg",
+      "description": "Generic artwork.",
+      "price": 10
+    },
+    {
+      "id": 47,
+      "title": "Cat Attitude",
+      "path": "src/assets/images/cat_attitude.jpeg",
+      "description": "Artwork featuring a cat with an attitude.",
+      "price": 8
+    },
+    {
+      "id": 48,
+      "title": "Color Palette",
+      "path": "src/assets/images/colors.jpeg",
+      "description": "Color palette illustration.",
+      "price": 6
+    },
+    {
+      "id": 49,
+      "title": "Fountain Pen",
+      "path": "src/assets/images/fountain_pen.jpeg",
+      "description": "Illustration of a fountain pen.",
+      "price": 15
+    },
+    {
+      "id": 50,
+      "title": "Glassy Girl",
+      "path": "src/assets/images/glass_girl.jpeg",
+      "description": "Artwork depicting a girl made of glass.",
+      "price": 14
+    },
+    {
+      "id": 51,
+      "title": "Get Shit Done",
+      "path": "src/assets/images/gsd.jpeg",
+      "description": "Illustration of a German Shepherd dog.",
+      "price": 12
+    },
+    {
+      "id": 52,
+      "title": "Prosperity",
+      "path": "src/assets/images/have_more.jpeg",
+      "description": "Motivational message: Have more.",
+      "price": 5
+    },
+    {
+      "id": 53,
+      "title": "Ace of Hearts",
+      "path": "src/assets/images/heart_ace.jpeg",
+      "description": "Illustration of the Ace of Hearts card.",
+      "price": 7
+    },
+    {
+      "id": 54,
+      "title": "Heisenberg",
+      "path": "src/assets/images/heisenberg.jpeg",
+      "description": "Illustration of Walter White as Heisenberg.",
+      "price": 16
+    },
+    {
+      "id": 55,
+      "title": "Illusion Artwork",
+      "path": "src/assets/images/illusion.jpeg",
+      "description": "Artwork depicting an illusion.",
+      "price": 13
+    },
+    {
+      "id": 56,
+      "title": "Interstellar Poster",
+      "path": "src/assets/images/interstellar.jpeg",
+      "description": "Poster for the movie Interstellar.",
+      "price": 20
+    },
+    {
+      "id": 57,
+      "title": "Nike",
+      "path": "src/assets/images/just_do_it_2.jpeg",
+      "description": "Motivational message: Just do it.",
+      "price": 8
+    },
+    {
+      "id": 58,
+      "title": "Just Do It",
+      "path": "src/assets/images/just_do_it.jpeg",
+      "description": "Motivational message: Just do it.",
+      "price": 8
+    },
+    {
+      "id": 59,
+      "title": "Lightning McQueen",
+      "path": "src/assets/images/lightning_mcqueen.jpeg",
+      "description": "Artwork featuring Lightning McQueen from the Cars movie.",
+      "price": 14
+    },
+    {
+      "id": 60,
+      "title": "Mindset",
+      "path": "src/assets/images/mindset.jpeg",
+      "description": "Motivational message: Mindset is everything.",
+      "price": 7
+    },
+    {
+      "id": 61,
+      "title": "P.O.V",
+      "path": "src/assets/images/POV.jpeg",
+      "description": "Point of view illustration.",
+      "price": 9
+    },
+    {
+      "id": 62,
+      "title": "Something Fun",
+      "path": "src/assets/images/something_fun.jpeg",
+      "description": "Artwork with the message: Something fun.",
+      "price": 6
+    },
+    {
+      "id": 63,
+      "title": "Tyler Durden",
+      "path": "src/assets/images/tyler_fight_club.jpeg",
+      "description": "Illustration of Tyler Durden from the Fight Club movie.",
+      "price": 17
     }
   ]
 }
