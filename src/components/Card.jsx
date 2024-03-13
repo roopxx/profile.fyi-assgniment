@@ -1,8 +1,11 @@
-import { useState } from "react";
-
-function Card({ productName, productDescription, productPrice, productImage }) {
-  const [quantity, setQuantity] = useState(0);
-
+function Card({
+  productID,
+  productName,
+  productDescription,
+  productPrice,
+  productImage,
+  onAddToCart,
+}) {
   return (
     <>
       <button className="group relative mb-4 border-8 border-double border-black p-2 transition-all duration-1000 before:absolute before:inset-0 before:rounded-md before:bg-black before:opacity-20 before:content-[''] hover:p-1 hover:before:bg-inherit">
@@ -20,20 +23,14 @@ function Card({ productName, productDescription, productPrice, productImage }) {
               $ : {productPrice}
             </p>
           </div>
-          <div className="mt-auto flex items-center justify-between">
+          <div className="mt-auto flex items-center justify-end">
             <div className="hidden gap-2 group-hover:flex">
-              <input
-                type="number"
-                name="quantity"
-                id="quantity"
-                placeholder="0"
-                value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
-                min={0}
-                max={8}
+              <button
+                onClick={() => {
+                  onAddToCart(productID);
+                }}
                 className="w-20 rounded-md bg-black px-4 py-1 font-bold uppercase text-white outline"
-              />
-              <button className="w-20 rounded-md bg-black px-4 py-1 font-bold uppercase text-white outline">
+              >
                 ADD
               </button>
             </div>
