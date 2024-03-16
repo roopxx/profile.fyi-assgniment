@@ -1,9 +1,6 @@
-import { useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
 
-function Cart() {
-  const location = useLocation();
-  const cartItems = location.state;
+function Cart({ cartItems, addToCart }) {
   return (
     <>
       <NavBar />
@@ -38,6 +35,14 @@ function Cart() {
                     <div>
                       <p className="text-2xl">Price: ${item.price}</p>
                       <p className="text-2xl">Quantity: {item.quantity}</p>
+                      <button
+                        onClick={() => {
+                          addToCart(item.id);
+                        }}
+                        className="w-20 rounded-md bg-black px-4 py-1 font-bold uppercase text-white outline"
+                      >
+                        ADD
+                      </button>{" "}
                     </div>
                   </div>
                 </div>

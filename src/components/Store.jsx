@@ -1,39 +1,8 @@
-import { useEffect, useState } from "react";
 import Card from "./Card";
 import NavBar from "./NavBar";
-import { fetchPoster } from "../utils/fetch";
 import { Link } from "react-router-dom";
 
-function Store() {
-  const [posters, setPosters] = useState([]);
-  const [cart, setCart] = useState([]);
-
-  useEffect(() => {
-    fetchPoster().then((data) => setPosters(data));
-  }, []);
-
-  function addToCart(id) {
-    const posterIndex = cart.findIndex((product) => product.id === id);
-
-    if (posterIndex !== -1) {
-      const updatedCart = [...cart];
-      updatedCart[posterIndex].quantity += 1;
-      setCart(updatedCart);
-    } else {
-      const posterToAdd = posters.find((product) => product.id === id);
-
-      const updatedCart = [
-        ...cart,
-        {
-          ...posterToAdd,
-          quantity: 1,
-        },
-      ];
-      setCart(updatedCart);
-    }
-  }
-  console.log(cart);
-
+function Store({ posters, addToCart, cart }) {
   return (
     <>
       <NavBar />
@@ -44,7 +13,6 @@ function Store() {
             {cart && (
               <Link
                 to="/cart"
-                state={cart}
                 className="group relative mt-4 inline-block text-lg"
               >
                 <span className="relative z-10 block overflow-hidden rounded-lg border-2 border-gray-900 px-5 py-3 font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out group-hover:text-white">
