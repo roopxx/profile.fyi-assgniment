@@ -13,7 +13,7 @@ export default function Router() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetchPoster().then((data) => setPosters(data));
+    fetchPoster().then((data) => setPosters(data.images));
   }, []);
 
   function addToCart(id) {

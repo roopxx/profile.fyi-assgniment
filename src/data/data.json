@@ -1,4 +1,46 @@
 {
+  "home": [
+    {
+      "path": "src/assets/images/marvel/spiderman.jpeg",
+      "alt": "spiderman"
+    },
+    {
+      "path": "src/assets/bg-images/album_EM.jpeg",
+      "alt": "album_eminem"
+    },
+    {
+      "path": "src/assets/bg-images/spider_man.jpeg",
+      "alt": "spider_man"
+    },
+    {
+      "path": "src/assets/bg-images/girl-yellow-spec.jpeg",
+      "alt": "girl-yellow-spec"
+    },
+    {
+      "path": "src/assets/bg-images/scenery.jpeg",
+      "alt": "scenery"
+    },
+    {
+      "path": "src/assets/bg-images/just_do_it.jpeg",
+      "alt": ""
+    },
+    {
+      "path": "src/assets/bg-images/grey-art.jpeg",
+      "alt": "grey-art"
+    },
+    {
+      "path": "src/assets/bg-images/naruto.jpeg",
+      "alt": "naruto"
+    },
+    {
+      "path": "src/assets/bg-images/popeye.jpeg",
+      "alt": "popeye"
+    },
+    {
+      "path": "src/assets/bg-images/mindset.jpeg",
+      "alt": "mindset"
+    }
+  ],
   "images": [
     {
       "id": 1,

@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import { useEffect, useState } from "react";
+import { fetchPoster } from "./utils/fetch";
 
 function App() {
+  const [homePageImages, setHomePageImages] = useState([]);
+
+  useEffect(() => {
+    fetchPoster().then((data) => setHomePageImages(data.home));
+  }, []);
+
   return (
     <>
       <NavBar />
@@ -25,56 +33,14 @@ function App() {
             </p>
           </div>
           <div className="masonry w-1/2 space-y-3 p-2">
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/spider_man.jpeg "
-              alt="spider_man"
-            />
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/album_EM.jpeg"
-              alt="album_EM"
-            />
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/girl-yellow-spec.jpeg"
-              alt="girl-yellow-spec"
-            />
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/roronoa_zoro.jpeg"
-              alt="roronoa_zoro"
-            />
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/scenery.jpeg"
-              alt="scenery"
-            />
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/just_do_it.jpeg"
-              alt=""
-            />
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/grey-art.jpeg"
-              alt="grey-art"
-            />
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/naruto.jpeg"
-              alt="naruto"
-            />
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/popeye.jpeg"
-              alt="popeye"
-            />
-            <img
-              className="border-8 border-double border-black p-0.5"
-              src="src/assets/bg-images/mindset.jpeg"
-              alt="mindset"
-            />
+            {homePageImages.map((image) => (
+              <img
+                className="border-8 border-double border-black p-0.5"
+                key={image.alt}
+                src={image.path}
+                alt={image.alt}
+              />
+            ))}
           </div>
         </div>
         <div className="mt-10 space-y-10">
