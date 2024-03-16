@@ -38,6 +38,11 @@ export default function Router() {
   }
   console.log(cart);
 
+  function removeFromCart(id) {
+    const updatedCart = cart.filter((product) => product.id !== id);
+    setCart(updatedCart);
+  }
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -52,7 +57,13 @@ export default function Router() {
     { path: "/contact", element: <Contact /> },
     {
       path: "/cart",
-      element: <Cart addToCart={addToCart} cartItems={cart} />,
+      element: (
+        <Cart
+          addToCart={addToCart}
+          cartItems={cart}
+          removeFromCart={removeFromCart}
+        />
+      ),
     },
   ]);
 
