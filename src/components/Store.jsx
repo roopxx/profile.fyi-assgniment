@@ -6,16 +6,18 @@ function Store({ posters, addToCart, cart }) {
   return (
     <>
       <NavBar />
-      <div className="size-full p-10">
-        <div className="flex items-center justify-between">
-          <h1 className="p-5 text-5xl">PICK YOUR STYLE</h1>
+      <div className="mx-4 md:mx-10">
+        <div className="mb-5 flex items-center justify-between">
+          <h1 className="mt-2 text-xl font-bold tracking-wide underline underline-offset-8 md:mt-1 md:text-5xl">
+            PICK YOUR STYLE
+          </h1>
           <div>
             {cart && (
               <Link
                 to="/cart"
-                className="group relative mt-4 inline-block text-lg"
+                className="group relative mt-4 inline-block text-xs md:text-lg"
               >
-                <span className="relative z-10 block overflow-hidden rounded-lg border-2 border-gray-900 px-5 py-3 font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out group-hover:text-white">
+                <span className="relative z-10 block overflow-hidden rounded-lg border-2 border-gray-900 px-2 py-3 font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out group-hover:text-white md:px-5">
                   <span className="absolute inset-0 size-full rounded-lg bg-gray-50 px-5 py-3"></span>
                   <span className="ease absolute left-0 -ml-2 size-48 origin-top-right -translate-x-full translate-y-12 -rotate-90 bg-gray-900 transition-all duration-300 group-hover:-rotate-180"></span>
                   <span className="relative">
@@ -34,7 +36,7 @@ function Store({ posters, addToCart, cart }) {
             )}
           </div>
         </div>
-        <div className="masonry m-2 [&>img:not(:first-child)]:mt-8">
+        <div className="masonry-store md:masonry">
           {posters.map((product) => (
             <Card
               key={product.id}

@@ -18,7 +18,7 @@ function ShowHideText({ heading, para }) {
         >
           {para.split(" ").map((char, index) => (
             <p
-              className="animate-text-reveal inline-block break-keep [animation-fill-mode:backwards]"
+              className="inline-block animate-text-reveal break-keep [animation-fill-mode:backwards]"
               key={`${char}-${index}`}
               style={{
                 animationDelay: `${index * 0.05}s`,

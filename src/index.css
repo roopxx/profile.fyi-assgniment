@@ -12,4 +12,9 @@
     column-gap: 0.5em;
     column-count: 3;
   }
+
+  .masonry-store {
+    column-gap: .5em;
+    column-count: 2;
+  }
 }
