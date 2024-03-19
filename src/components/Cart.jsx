@@ -1,73 +1,119 @@
 import NavBar from "./NavBar";
 
 function Cart({ cartItems, addToCart, removeFromCart }) {
+  const totalPrice = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0,
+  );
+  const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0,
+  );
+
+  let shipping = 0;
+  let tax = totalPrice * 0.12;
+  if (totalPrice > 120) {
+    shipping = 0.1 * totalItems;
+  }
+
   return (
     <>
       <NavBar />
-      <div className="p-10">
+      <div className="mx-4 flex h-dvh items-center justify-center md:mx-10">
         {cartItems.length === 0 ? (
-          <p className="text-center text-4xl">Your cart is empty</p>
+          <p className="my-auto border border-black p-10 text-center text-lg md:text-4xl">
+            Oh no! Your cart seems to be empty.
+            <br />
+            Explore our store and discover a world of captivating posters
+            waiting to adorn your walls.
+          </p>
         ) : (
           <div>
-            <p className="text-5xl">
-              Your posters to be purchased, nice selection!!
+            <span className="float-right my-2 border border-black bg-gray-300 px-2 text-xs md:text-4xl ">
+              Cart Total: ${totalPrice.toFixed(2)}
+            </span>
+            <p className="px-2 py-10 text-xl md:text-5xl">
+              Nice selection! Your posters to be on your walls.
             </p>
-            {cartItems.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-between border-b border-gray-300 py-4"
-              >
-                <div className="flex gap-10">
-                  <div>
-                    <img
-                      className="h-[260px] w-[200px] border-8 border-double border-black"
-                      src={item.path}
-                      alt={item.description}
-                    />
-                  </div>
-                  <div className="flex flex-col justify-between">
+            <div className="flex flex-col md:px-5">
+              {cartItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex gap-2 border-b-2 border-black py-2 md:gap-10 md:py-5"
+                >
+                  <img
+                    className="h-48 w-full border-8 border-double border-black md:h-[400px] md:w-1/4"
+                    src={item.path}
+                    alt={item.description}
+                  />
+                  <div className="flex w-full flex-col justify-between">
                     <div>
-                      <h2 className="text-4xl">{item.title}</h2>
-                      <p className="py-2 text-3xl text-gray-600">
+                      <h2 className="text-xl md:text-5xl">{item.title}</h2>
+                      <p className="text-sm text-gray-600 md:py-7 md:text-4xl">
                         {item.description}
                       </p>
                     </div>
                     <div>
-                      <p className="text-2xl">Price: ${item.price}</p>
-                      <p className="text-2xl">Quantity: {item.quantity}</p>
-                      <button
-                        onClick={() => {
-                          removeFromCart(item.id);
-                        }}
-                        className="w-auto rounded-md bg-red-800 px-4 py-1 font-bold uppercase text-white outline"
-                      >
-                        Remove
-                      </button>{" "}
-                      <button
-                        onClick={() => {
-                          addToCart(item.id);
-                        }}
-                        className="w-20 rounded-md bg-black px-4 py-1 font-bold uppercase text-white outline"
-                      >
-                        ADD
-                      </button>
+                      <p className="md:text-3xl">Price: ${item.price}</p>
+                      <p className="md:text-3xl">Quantity: {item.quantity}</p>
+                      <div className="flex gap-2 md:mt-4">
+                        <button
+                          onClick={() => {
+                            removeFromCart(item.id);
+                          }}
+                          className="rounded-md bg-red-800 px-4 py-1 font-bold uppercase text-white outline md:px-12 md:py-4"
+                        >
+                          Remove
+                        </button>
+                        <button
+                          onClick={() => {
+                            addToCart(item.id);
+                          }}
+                          className="rounded-md bg-black px-4 py-1 font-bold uppercase text-white outline md:px-12 md:py-4"
+                        >
+                          ADD
+                        </button>
+                      </div>
+                      <p className="float-right mt-2 md:text-3xl">
+                        Item total: ${(item.price * item.quantity).toFixed(2)}
+                      </p>
                     </div>
                   </div>
                 </div>
-                <p className="self-end text-3xl">
-                  Total: ${item.price * item.quantity}
-                </p>
-              </div>
-            ))}
-            <div className="mt-8">
-              <p className="text-4xl">
-                Total: $
-                {cartItems.reduce(
-                  (total, item) => total + item.price * item.quantity,
-                  0,
-                )}
-              </p>
-              <button className="mt-4 rounded-lg border-4 border-black bg-red-500 px-6 py-3 text-4xl text-white hover:bg-red-600">
+              ))}
+            </div>
+            <div className="my-8">
+              {totalPrice > 120 && (
+                <table className="table-auto border-collapse border border-black md:text-2xl">
+                  <tbody>
+                    <tr>
+                      <td className="border border-black px-4 py-2">
+                        Shipping:
+                      </td>
+                      <td className="border border-black px-4 py-2">
+                        ${shipping.toFixed(2)}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black px-4 py-2">
+                        Tax (10%):
+                      </td>
+                      <td className="border border-black px-4 py-2">
+                        ${tax.toFixed(2)}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border border-black px-4 py-2">
+                        Total with Tax & Shipping:
+                      </td>
+                      <td className="border border-black px-4 py-2">
+                        ${(totalPrice + shipping + tax).toFixed(2)}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              )}
+              <button className="mt-4 rounded-lg border-4 border-black bg-red-500 px-6 py-3 text-white hover:bg-red-600 md:text-4xl">
                 Proceed to Checkout
               </button>
             </div>
