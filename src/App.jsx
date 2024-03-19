@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import { useEffect, useState } from "react";
 import { fetchPoster } from "./utils/fetch";
 import ShowHideText from "./components/ShowHideText";
+import Footer from "./components/Footer";
 
 function App() {
   const [homePageImages, setHomePageImages] = useState([]);
@@ -98,6 +99,7 @@ function App() {
           </p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -5,7 +5,7 @@ function NavBar() {
   const [show, setShow] = useState(true);
   return (
     <>
-      <header className="w-full px-5 py-6 text-black shadow md:px-10">
+      <header className="sticky top-0 z-50 w-full bg-white px-5 py-3 text-black shadow md:px-10 md:py-6">
         <nav className="md:flex md:items-center md:justify-between">
           <div className="flex items-center justify-between">
             <h2 className="text-3xl font-bold tracking-wider md:text-4xl">
@@ -20,7 +20,7 @@ function NavBar() {
               }}
             >
               {show ? (
-                <div className="m-0 p-0 transition-transform hover:duration-300 hover:ease-linear hover:rotate-180">
+                <div className="m-0 p-0 transition-transform hover:rotate-180 hover:duration-300 hover:ease-linear">
                   <svg
                     fill="#000000"
                     width="28px"
@@ -46,7 +46,7 @@ function NavBar() {
                   </svg>
                 </div>
               ) : (
-                <div className="m-0 p-0 transition-transform hover:duration-300 hover:ease-linear hover:rotate-180">
+                <div className="m-0 p-0 transition-transform hover:rotate-180 hover:duration-300 hover:ease-linear">
                   <svg
                     fill="#000000"
                     width="28px"

@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 
 function Contact() {
@@ -57,6 +58,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

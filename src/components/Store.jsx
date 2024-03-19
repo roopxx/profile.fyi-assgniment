@@ -1,4 +1,5 @@
 import Card from "./Card";
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 
@@ -50,6 +51,7 @@ function Store({ posters, addToCart, cart }) {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 }

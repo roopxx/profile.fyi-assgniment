@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 
 function Cart({ cartItems, addToCart, removeFromCart }) {
@@ -120,6 +121,7 @@ function Cart({ cartItems, addToCart, removeFromCart }) {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 }

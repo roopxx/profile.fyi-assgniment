@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 
 function About() {
@@ -38,6 +39,7 @@ function About() {
           </p>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
