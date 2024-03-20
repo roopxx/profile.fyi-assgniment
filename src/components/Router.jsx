@@ -11,9 +11,15 @@ import { fetchPoster } from "../utils/fetch";
 export default function Router() {
   const [posters, setPosters] = useState([]);
   const [cart, setCart] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchPoster().then((data) => setPosters(data.images));
+    fetchPoster().then((data) => {
+      setPosters(data.images);
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+    });
   }, []);
 
   function addToCart(id) {
@@ -36,7 +42,6 @@ export default function Router() {
       setCart(updatedCart);
     }
   }
-  console.log(cart);
 
   function removeFromCart(id) {
     const updatedCart = cart.filter((product) => product.id !== id);
@@ -46,12 +51,19 @@ export default function Router() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <App />,
+      element: <App isLoading={loading} />,
       errorElement: <ErrorPage />,
     },
     {
       path: "/store",
-      element: <Store posters={posters} addToCart={addToCart} cart={cart} />,
+      element: (
+        <Store
+          posters={posters}
+          addToCart={addToCart}
+          cart={cart}
+          isLoading={loading}
+        />
+      ),
     },
     { path: "/about", element: <About /> },
     { path: "/contact", element: <Contact /> },
