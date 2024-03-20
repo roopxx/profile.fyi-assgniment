@@ -5,6 +5,7 @@ import { fetchPoster } from "./utils/fetch";
 import ShowHideText from "./components/ShowHideText";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
+import PropTypes from "prop-types";
 
 function App({ isLoading }) {
   const [homePageImages, setHomePageImages] = useState([]);
@@ -108,5 +109,9 @@ function App({ isLoading }) {
     </>
   );
 }
+
+App.propTypes = {
+  isLoading: PropTypes.bool,
+};
 
 export default App;

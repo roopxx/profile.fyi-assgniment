@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function Card({
   productID,
   productName,
@@ -40,5 +42,14 @@ function Card({
     </>
   );
 }
+
+Card.propTypes = {
+  productID: PropTypes.number,
+  productName: PropTypes.string,
+  productDescription: PropTypes.string,
+  productPrice: PropTypes.number,
+  productImage: PropTypes.string,
+  onAddToCart: PropTypes.func,
+};
 
 export default Card;

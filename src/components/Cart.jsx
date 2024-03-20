@@ -1,5 +1,6 @@
 import Footer from "./Footer";
 import NavBar from "./NavBar";
+import PropTypes from "prop-types";
 
 function Cart({ cartItems, addToCart, removeFromCart }) {
   const totalPrice = cartItems.reduce(
@@ -127,5 +128,11 @@ function Cart({ cartItems, addToCart, removeFromCart }) {
     </>
   );
 }
+
+Cart.propTypes = {
+  cartItems: PropTypes.array,
+  addToCart: PropTypes.func,
+  removeFromCart: PropTypes.func,
+};
 
 export default Cart;

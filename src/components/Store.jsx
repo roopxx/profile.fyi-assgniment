@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Loader from "./Loader";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function Store({ posters, addToCart, cart, isLoading }) {
   return (
@@ -61,5 +62,12 @@ function Store({ posters, addToCart, cart, isLoading }) {
     </>
   );
 }
+
+Store.propTypes = {
+  posters: PropTypes.array,
+  addToCart: PropTypes.func,
+  cart: PropTypes.array,
+  isLoading: PropTypes.bool,
+};
 
 export default Store;

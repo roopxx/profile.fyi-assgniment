@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 function ShowHideText({ heading, para }) {
   const [showText, setShowText] = useState(false);
@@ -32,5 +33,10 @@ function ShowHideText({ heading, para }) {
     </section>
   );
 }
+
+ShowHideText.propTypes = {
+  heading: PropTypes.string,
+  para: PropTypes.string,
+};
 
 export default ShowHideText;
