@@ -5,6 +5,7 @@ export default {
     extend: {
       animation: {
         "text-reveal": "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s",
+        float: "float 0.5s ease forwards",
       },
       keyframes: {
         "text-reveal": {
@@ -13,6 +14,16 @@ export default {
           },
           "100%": {
             transform: "translate(0, 0)",
+          },
+        },
+        float: {
+          "0%": {
+            transform: "translateX(100%)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: 1,
           },
         },
       },

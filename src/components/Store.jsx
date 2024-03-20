@@ -4,8 +4,22 @@ import Loader from "./Loader";
 import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 function Store({ posters, addToCart, cart, isLoading }) {
+  const [notification, setNotification] = useState(null);
+
+  const handleAddToCart = (productId) => {
+    addToCart(productId);
+    const productName = posters.find(
+      (product) => product.id === productId,
+    ).title;
+    setNotification(`${productName} has been added to your cart.`);
+    setTimeout(() => {
+      setNotification(null);
+    }, 2250);
+  };
+
   return (
     <>
       <NavBar />
@@ -43,6 +57,11 @@ function Store({ posters, addToCart, cart, isLoading }) {
               )}
             </div>
           </div>
+          {notification && (
+            <div className="fixed bottom-10 right-4 z-50 animate-float rounded-md border-2 border-black bg-red-800 p-1 text-sm font-bold text-white shadow-lg md:bottom-28 md:border-b-8 md:px-4 md:py-2 md:text-xl">
+              <span className="mr-2">{notification}</span>
+            </div>
+          )}
           <div className="masonry-store md:masonry">
             {posters.map((product) => (
               <Card
@@ -52,7 +71,7 @@ function Store({ posters, addToCart, cart, isLoading }) {
                 productDescription={product.description}
                 productImage={product.path}
                 productPrice={product.price}
-                onAddToCart={addToCart}
+                onAddToCart={handleAddToCart}
               />
             ))}
           </div>
