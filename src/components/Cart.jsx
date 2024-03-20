@@ -20,14 +20,16 @@ function Cart({ cartItems, addToCart, removeFromCart }) {
   return (
     <>
       <NavBar />
-      <div className="mx-4 flex h-dvh items-center justify-center md:mx-10">
+      <div className="mx-4 md:mx-10">
         {cartItems.length === 0 ? (
-          <p className="my-auto border border-black p-10 text-center text-lg md:text-4xl">
-            Oh no! Your cart seems to be empty.
-            <br />
-            Explore our store and discover a world of captivating posters
-            waiting to adorn your walls.
-          </p>
+          <div className="flex min-h-screen flex-col">
+            <p className="my-auto border border-black p-10 text-center text-lg md:text-4xl">
+              Oh no! Your cart seems to be empty.
+              <br />
+              Explore our store and discover a world of captivating posters
+              waiting to adorn your walls.
+            </p>
+          </div>
         ) : (
           <div>
             <span className="float-right my-2 border border-black bg-gray-300 px-2 text-xs md:text-4xl ">
@@ -83,9 +85,9 @@ function Cart({ cartItems, addToCart, removeFromCart }) {
                 </div>
               ))}
             </div>
-            <div className="my-8">
+            <div className="my-8 flex flex-col">
               {totalPrice > 120 && (
-                <table className="table-auto border-collapse border border-black md:text-2xl">
+                <table className="w-fit table-auto border-collapse border border-black md:text-2xl">
                   <tbody>
                     <tr>
                       <td className="border border-black px-4 py-2">
@@ -114,7 +116,7 @@ function Cart({ cartItems, addToCart, removeFromCart }) {
                   </tbody>
                 </table>
               )}
-              <button className="mt-4 rounded-lg border-4 border-black bg-red-500 px-6 py-3 text-white hover:bg-red-600 md:text-4xl">
+              <button className="my-12 self-end rounded-lg border-4 border-black bg-red-500 px-6 py-3 text-white hover:bg-red-600 md:text-4xl">
                 Proceed to Checkout
               </button>
             </div>

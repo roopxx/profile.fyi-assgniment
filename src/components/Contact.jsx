@@ -6,7 +6,7 @@ function Contact() {
     <>
       <NavBar />
       <div className="mx-4 mb-10 md:mx-10">
-        <div className="mt-12 space-y-8">
+        <div className="my-6 space-y-8 md:my-24">
           <h1 className="text-center text-3xl md:text-6xl">Get in Touch</h1>
           <p className="text-center text-xl md:text-4xl">
             We&apos;re here to assist you in any way we can. Whether you have a

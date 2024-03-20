@@ -6,7 +6,7 @@ function About() {
     <>
       <NavBar />
       <div className="mx-4 mb-10 md:mx-10">
-        <div className="mt-12 space-y-10">
+        <div className="my-6 space-y-10 md:my-24">
           <h1 className="text-center text-3xl md:text-6xl">
             About <span className="font-bold text-red-700">Wall</span>
             <span className="font-bold">Wonder</span>.
