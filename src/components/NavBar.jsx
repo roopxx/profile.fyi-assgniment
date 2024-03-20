@@ -8,10 +8,12 @@ function NavBar() {
       <header className="sticky top-0 z-50 w-full bg-white px-5 py-3 text-black shadow md:px-10 md:py-6">
         <nav className="md:flex md:items-center md:justify-between">
           <div className="flex items-center justify-between">
-            <h2 className="text-3xl font-bold tracking-wider md:text-4xl">
-              <span className="text-red-700">W</span>all
-              <span className="text-red-700">W</span>onder
-            </h2>
+            <NavLink to="/">
+              <h2 className="text-3xl font-bold tracking-wider md:text-4xl">
+                <span className="text-red-700">W</span>all
+                <span className="text-red-700">W</span>onder
+              </h2>
+            </NavLink>
             <button
               className="md:hidden"
               onClick={() => {

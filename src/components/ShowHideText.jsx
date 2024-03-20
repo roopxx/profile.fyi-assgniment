@@ -5,10 +5,10 @@ function ShowHideText({ heading, para }) {
   const [showText, setShowText] = useState(false);
 
   return (
-    <section className="rounded-md border-2 border-black">
+    <section className="w-full rounded-md border-2 border-black md:w-auto">
       <button
         onDoubleClick={() => setShowText(!showText)}
-        className={`w-full p-3 text-left text-xl font-bold hover:text-red-700 md:text-3xl ${showText ? "text-red-700" : ""} bg-red-200 md:text-center`}
+        className={`w-full p-3 text-left text-xl font-bold hover:text-red-700 md:text-3xl ${showText ? "text-red-700" : ""} bg-red-200 text-center`}
       >
         {heading}
       </button>
